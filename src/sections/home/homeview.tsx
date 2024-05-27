@@ -9,22 +9,29 @@ export default function HomeView() {
             <Typography variant="h4" sx={{ mb: 5 }}>
                 Hi, Welcome Home
             </Typography>
-            <Grid container spacing={8}>
-                <Grid xs={12} sm={6} md={4}>
+            <Grid container spacing={5}>
+                <Grid xs={12} sm={6} md={3}>
+                    <AppWidgetSummary
+                        title="Thành phố"
+                        total={60}
+                        icon={<img alt="icon" src="/assets/icons/city.png" />}
+                    />
+                </Grid>
+                <Grid xs={12} sm={6} md={3}>
                     <AppWidgetSummary
                         title="Khách sạn"
                         total={7}
                         icon={<img alt="icon" src="/assets/icons/hotel.png" />}
                     />
                 </Grid>
-                <Grid xs={12} sm={6} md={4}>
+                <Grid xs={12} sm={6} md={3}>
                     <AppWidgetSummary
                         title="Người dùng"
                         total={13}
                         icon={<img alt="icon" src="/assets/icons/user.png" />}
                     />
                 </Grid>
-                <Grid xs={12} sm={6} md={4}>
+                <Grid xs={12} sm={6} md={3}>
                     <AppWidgetSummary
                         title="Tổng doanh thu"
                         total={17000}
@@ -42,7 +49,7 @@ export default function HomeView() {
                 </Grid> */}
 
                 <Grid xs={12} md={6} lg={8}>
-                    <AppRevenueMonth   
+                    <AppRevenueMonth
                         title="Website Visits"
                         subheader="(+43%) than last year"
                         chart={{
@@ -82,7 +89,7 @@ export default function HomeView() {
                         }}
                     />
                 </Grid>
-              
+
 
                 {/* <Grid xs={12} md={6} lg={4}>
                     <AppCurrentVisits

@@ -6,6 +6,7 @@ import axiosInstance from '../api/axios';
 export const AppPage = lazy(() => import('../pages/app'));
 export const HotelsPage = lazy(() => import('../pages/hotels'));
 export const UsersPage = lazy(() => import('../pages/users'));
+export const SigninPage = lazy(() => import('../pages/signin'));
 
 export default function Router() {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ export default function Router() {
           navigate('/');
         }
       } catch (error: any) {
-        navigate('/login');
+        navigate('/signin');
       }
     };
 
@@ -47,6 +48,11 @@ export default function Router() {
         { element: <div>login</div>, path: 'login', index: true }
       ]
     }
+    ,
+    {
+      path:"signin",
+      element: <SigninPage />,
+    } 
   ])
 
   return routes

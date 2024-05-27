@@ -40,9 +40,9 @@ export default function HotelTableRow({
             case '':
                 return 'orange';
             case 1:
-                return 'lightgreen';
+                return '#00Ab84';
             case 2:
-                return 'gray';
+                return '#DDD';
             default:
                 return 'orange';
         }
@@ -112,11 +112,13 @@ export default function HotelTableRow({
                             onChange={handleChange}
                             sx={{
                                 backgroundColor: getBackgroundColor(status),
+                                // color:"white",
                                 '&.Mui-disabled': {
                                     cursor: 'not-allowed',
+                                    color:"white",
                                 },
                             }}
-                            disabled={status !== ''}
+                            // disabled={status !== ''}
 
                         >
                             <MenuItem value='' ><em>Chờ xác nhận</em></MenuItem>
