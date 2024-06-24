@@ -15,10 +15,12 @@ import Scrollbar from '../../components/scrollbar';
 import { NAV } from './config-layout';
 import navConfig from './config-navigation';
 import { Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 // ----------------------------------------------------------------------
 
 export default function Nav({ openNav, onCloseNav }: any) {
+  const navigate = useNavigate()
   const pathname = usePathname();
 
   const upLg = useResponsive('up', 'lg');
@@ -44,7 +46,7 @@ export default function Nav({ openNav, onCloseNav }: any) {
     >
       <Avatar src={account.photoURL} alt="photoURL" />
 
-      <Box sx={{ ml: 2, gap:"10px", display:"flex", flexDirection:"column" }}>
+      <Box sx={{ ml: 2, gap: "10px", display: "flex", flexDirection: "column" }}>
         <Typography variant="subtitle2">Quản trị viên</Typography>
       </Box>
     </Box>
@@ -69,7 +71,15 @@ export default function Nav({ openNav, onCloseNav }: any) {
         },
       }}
     >
-      <Logo sx={{ mt: 3, ml: 4 }} />
+      {/* <Logo sx={{ mt: 3, ml: 4 }} /> */}
+      <Box width="100%" bgcolor="#13366E" py="30px" borderRadius="5px">
+        <img src="https://easybook.demotheme.matbao.support/wp-content/uploads/2018/08/logo.png" alt="logo"
+          style={{
+            height: "35px", width: "133px", cursor: "pointer",
+            marginLeft: "30px",
+          }} onClick={() => navigate("/")} />
+      </Box>
+
 
       {renderAccount}
 

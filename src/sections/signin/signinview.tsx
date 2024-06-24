@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
@@ -16,29 +16,83 @@ import VisibilityIcon from '@mui/icons-material/Visibility'
 
 import { useNavigate } from 'react-router-dom';
 import { bgGradient } from '../../theme/css';
+import axiosInstance from '../../api/axios';
 
 
 // ----------------------------------------------------------------------
 
 export default function SigninView() {
+    const [account, setAccount] = useState('')
+    const [password, setPassword] = useState('')
+
+    const [errAccount, setErrAccount] = useState(false)
+    const [errPassword, setErrPassword] = useState(false)
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState<any>();
+
     const theme = useTheme();
 
     const navigate = useNavigate();
 
     const [showPassword, setShowPassword] = useState(false);
 
-    const handleClick = () => {
-        navigate('/');
-    };
+    const handleChangeEmail = (e: any) => {
+        setAccount(e.target.value)
+        if (e.target.value) {
+            setErrAccount(false)
+        }
+    }
+    const handleChangePassword = (e: any) => {
+        setPassword(e.target.value)
+        if (e.target.value) {
+            setErrPassword(false)
+        }
+    }
 
+    const handleSignin = async (e: any) => {
+        e.preventDefault()
+        if (!account || !password) {
+            !account ? setErrAccount(true) : setErrAccount(false)
+            !password ? setErrPassword(true) : setErrPassword(false)
+            return;
+        }
+        const login = async () => {
+            setLoading(true)
+            try {
+                const res = await axiosInstance.post('/auth/admin/signin', {
+                    account,
+                    password
+                })
+                if (res.status === 200) {
+                    localStorage.setItem("accessToken", JSON.stringify(res.data.accessToken))
+                    navigate('/')
+                }
+            } catch (error) {
+                setError(error)
+            }
+        }
+        await login()
+    }
     const renderForm = (
-        <>
-            <Stack spacing={3}>
-                <TextField name="email" label="Email" />
+        <Box component="form" noValidate onSubmit={handleSignin}>
+            <Stack spacing={3} mb={5}>
                 <TextField
-                    name="Mật khẩu"
-                    label="Mật khẩu"
+                    name="account"
+                    label="Account"
+                    value={account}
+                    onChange={handleChangeEmail}
+                    autoComplete="email"
+                    autoFocus
+                    error={errAccount}
+                />
+                <TextField
+                    name="password"
+                    label="Password"
                     type={showPassword ? 'text' : 'password'}
+                    value={password}
+                    onChange={handleChangePassword}
+                    error={errPassword}
+                    autoComplete='current-password'
                     InputProps={{
                         endAdornment: (
                             <InputAdornment position="end">
@@ -50,22 +104,16 @@ export default function SigninView() {
                     }}
                 />
             </Stack>
-
-            <Box display="flex" justifyContent='center' alignItems='center' mt="50px">
-                <Button variant="contained" onClick={handleClick} sx={{ textTransform: "uppercase" }} size='large'>Đăng nhập</Button>
+            <Box display="flex" justifyContent='center' alignItems='center'>
+                <Button variant="contained" sx={{ textTransform: "uppercase" }} size='large' type="submit">Đăng nhập</Button>
             </Box>
-        </>
+        </Box>
     );
 
     return (
         <Box
             sx={{
-                // ...bgGradient({
-                //     color: alpha(theme.palette.background.default, 0.1),
-                //     imgUrl: '/assets/background/overlay_4.jpg',
-                // }),
-                height: 1,
-                bgcolor:"#13366E"
+                height: 1, bgcolor: "#13366E"
             }}
         >
             <img src="https://easybook.demotheme.matbao.support/wp-content/uploads/2018/08/logo.png" alt="logo"
@@ -74,7 +122,6 @@ export default function SigninView() {
                     top: "50px",
                     left: "40px",
                 }} onClick={() => navigate("/")} />
-
             <Stack alignItems="center" justifyContent="center" sx={{ height: 1 }}>
                 <Card
                     sx={{

@@ -1,17 +1,14 @@
-import { useState } from 'react';
-import Stack from '@mui/material/Stack';
-import Avatar from '@mui/material/Avatar';
-import TableRow from '@mui/material/TableRow';
-import TableCell from '@mui/material/TableCell';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Label from '../../components/label';
-import DetailHotel from './detail-hotel';
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
+import Avatar from '@mui/material/Avatar';
 import FormControl from '@mui/material/FormControl';
+import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Stack from '@mui/material/Stack';
+import TableCell from '@mui/material/TableCell';
+import TableRow from '@mui/material/TableRow';
+import Typography from '@mui/material/Typography';
+import { useState } from 'react';
+import DetailHotel from './detail-hotel';
 
 
 // ----------------------------------------------------------------------
@@ -122,7 +119,7 @@ export default function HotelTableRow({
 
                         >
                             <MenuItem value='' ><em>Chờ xác nhận</em></MenuItem>
-                            <MenuItem value={1}>Cháp nhận</MenuItem>
+                            <MenuItem value={1}>Chấp nhận</MenuItem>
                             <MenuItem value={2}>Từ chối</MenuItem>
                         </Select>
                     </FormControl>

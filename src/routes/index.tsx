@@ -13,7 +13,7 @@ export default function Router() {
   useEffect(() => {
     const checkUser = async () => {
       try {
-        const res = await axiosInstance.get('/staff/isLogin'); 
+        const res = await axiosInstance.get('/auth/admin/isLogin'); 
         if (res.data.isLogin) {
           navigate('/');
         }

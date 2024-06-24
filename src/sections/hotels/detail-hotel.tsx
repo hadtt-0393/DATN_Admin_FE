@@ -260,7 +260,7 @@ export default function DetailHotel({ isOpen, onClose }: any) {
 
         return (
             <Box>
-                <Box borderBottom="#EEE 1px solid">
+                <Box >
                     <Typography fontWeight="600" color="#183C7D" fontSize="18px" padding="25px 0">
                         Chi tiết khách sạn
                     </Typography>
