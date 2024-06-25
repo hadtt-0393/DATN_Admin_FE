@@ -8,30 +8,22 @@ import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import Typography from '@mui/material/Typography';
 import { useState } from 'react';
+import { Hotel } from '../../models';
 import DetailHotel from './detail-hotel';
 
+interface Prop {
+    hotel: Hotel;
+}
 
-// ----------------------------------------------------------------------
 
 export default function HotelTableRow({
-    name,
-    avatarUrl,
-    email,
-    phone,
-    city,
-    rooms,
-    address,
-    ratingAvg,
-
-}: any) {
+    hotel
+}: Prop) {
     const [open, setOpen] = useState(false);
     const [status, setStatus] = useState('');
-
-
     const handleChange = (event: SelectChangeEvent) => {
         setStatus(event.target.value as string);
     };
-
     const getBackgroundColor = (status: any) => {
         switch (status) {
             case '':
@@ -44,14 +36,9 @@ export default function HotelTableRow({
                 return 'orange';
         }
     };
-
     return (
         <>
             <TableRow hover tabIndex={-1} >
-                {/* <TableCell padding="checkbox">
-                    <Checkbox disableRipple checked={selected} onChange={handleClick} />
-                </TableCell> */}
-
                 <TableCell>
                     <Stack
                         display="flex"
@@ -60,7 +47,7 @@ export default function HotelTableRow({
                         spacing={2}
                         sx={{ overflow: "hidden", width: "250px" }}
                     >
-                        <Avatar alt={name} src={avatarUrl} />
+                        <Avatar alt={hotel.hotelName} src={hotel.hotelName} />
                         <Typography
                             variant="subtitle2"
                             noWrap
@@ -70,28 +57,28 @@ export default function HotelTableRow({
                                 whiteSpace: "nowrap",
                             }}
                         >
-                            {name}
+                            {hotel.hotelName}
                         </Typography>
                     </Stack>
                 </TableCell>
                 <TableCell align="center">
-                    {email}
+                    {hotel.email}
                 </TableCell>
 
                 <TableCell align="center">
-                    {phone}
+                    {hotel.hotline}
                 </TableCell>
 
                 <TableCell align="center">
-                    {city}
+                    {hotel.city}
                 </TableCell>
 
                 <TableCell align="center">
-                    {rooms}
+                    {hotel.roomIds.length === 0 ? '0' : hotel.rooms.reduce((total, room) => total + room.quantity, 0)}
                 </TableCell>
 
                 <TableCell align="center">
-                    {ratingAvg}
+                    {hotel.ratingAvg === 0 ? "Chưa có đánh giá" : `${hotel.ratingAvg}`}
                 </TableCell>
 
                 <TableCell align="center" >
@@ -109,13 +96,11 @@ export default function HotelTableRow({
                             onChange={handleChange}
                             sx={{
                                 backgroundColor: getBackgroundColor(status),
-                                // color:"white",
                                 '&.Mui-disabled': {
                                     cursor: 'not-allowed',
-                                    color:"white",
+                                    color: "white",
                                 },
                             }}
-                            // disabled={status !== ''}
 
                         >
                             <MenuItem value='' ><em>Chờ xác nhận</em></MenuItem>
@@ -125,7 +110,7 @@ export default function HotelTableRow({
                     </FormControl>
                 </TableCell>
             </TableRow>
-            <DetailHotel isOpen={open} onClose={() => setOpen(false)} />
+            <DetailHotel isOpen={open} onClose={() => setOpen(false)} hotel={hotel}/>
         </>
     );
 }

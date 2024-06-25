@@ -1,63 +1,51 @@
-import { useState } from 'react';
-import Stack from '@mui/material/Stack';
-import Avatar from '@mui/material/Avatar';
-import TableRow from '@mui/material/TableRow';
-import TableCell from '@mui/material/TableCell';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Label from '../../components/label';
-import DetailForm from './detail-form';
 import VisibilityIcon from '@mui/icons-material/Visibility';
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
+import TableCell from '@mui/material/TableCell';
+import TableRow from '@mui/material/TableRow';
+import Typography from '@mui/material/Typography';
+import { useState } from 'react';
+import { UserForm } from '../../models';
+import DetailForm from './detail-form';
 
-// ----------------------------------------------------------------------
+interface Prop {
+    userForm: UserForm;
+}
+
 
 export default function UserTableRow({
-    name,
-    avatarUrl,
-    email,
-    phone,
-    city,
-    times,
-}: any) {
+    userForm
+}: Prop) {
     const [open, setOpen] = useState(false);
 
     return (
         <>
             <TableRow hover tabIndex={-1} >
-                {/* <TableCell padding="checkbox">
-                    <Checkbox disableRipple checked={selected} onChange={handleClick} />
-                </TableCell> */}
-
                 <TableCell >
                     <Stack direction="row" alignItems="center" spacing={2} >
-                        <Avatar alt={name} src={avatarUrl} />
+                        <Avatar alt={userForm.username} src={userForm.username} />
                         <Typography variant="subtitle2" noWrap>
-                            {name}
+                            {userForm.username}
                         </Typography>
                     </Stack>
                 </TableCell>
-
                 <TableCell align="center">
-                    {email}
+                    {userForm.email}
                 </TableCell>
-
                 <TableCell align="center">
-                    {phone}
+                    {userForm.phoneNumber}
                 </TableCell>
-
                 <TableCell align="center">
-                    {city}
+                    {userForm.city}
                 </TableCell>
-
                 <TableCell align="center">
-                    {times}
+                    {userForm.forms.length}
                 </TableCell>
-
                 <TableCell align="center">
                     <VisibilityIcon color='success' onClick={() => setOpen(true)} />
                 </TableCell>
             </TableRow>
-            <DetailForm isOpen={open} onClose={() => setOpen(false)} />
+            <DetailForm isOpen={open} onClose={() => setOpen(false)} userForm={userForm} />
         </>
     );
 }

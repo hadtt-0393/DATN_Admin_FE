@@ -1,5 +1,4 @@
-import { useState } from 'react';
-
+import { useState, useEffect } from 'react';
 import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
 import Table from '@mui/material/Table';
@@ -17,7 +16,9 @@ import HotelTableRow from './hotel-table-row';
 import TableEmptyRows from './table-empty-rows';
 import TableNoData from './table-no-data';
 import HotelTableHead from './hotel-table-head';
+import { Hotel } from '../../models';
 import { AlignHorizontalCenter } from '@mui/icons-material';
+import axiosInstance from '../../api/axios';
 
 // ----------------------------------------------------------------------
 
@@ -31,6 +32,7 @@ export default function HotelPage() {
     const [filterName, setFilterName] = useState('');
 
     const [rowsPerPage, setRowsPerPage] = useState(5);
+    const [hotels, setHotels] = useState<Hotel[]>([])
 
     const handleSort = (event: any, id: any) => {
         const isAsc = orderBy === id && order === 'asc';
@@ -39,6 +41,14 @@ export default function HotelPage() {
             setOrderBy(id);
         }
     };
+
+    useEffect(() => {
+        const fetchAllHotel = async() => {
+            const listHotel = await axiosInstance.get('/hotel/getAllHotel')
+            setHotels(listHotel.data);
+        }
+        fetchAllHotel();
+    }, [])
 
 
     const handleChangePage = (event: any, newPage: any) => {
@@ -90,22 +100,16 @@ export default function HotelPage() {
                                     { id: 'rooms', label: 'Số lượng phòng', },
                                     { id: 'ratingAvg', label: 'Đánh giá trung bình' },
                                     { id: 'actions', label: 'Hành động' },
-                                    { id: 'status', label: 'Trạng thái'}
+                                    { id: 'status', label: 'Trạng thái' }
                                 ]}
                             />
                             <TableBody>
                                 {dataFiltered
                                     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                                    .map((row: any) => (
+                                    .map((hotel: Hotel) => (
                                         <HotelTableRow
-                                            key={row.id}
-                                            avatarUrl={row.avatarUrl}
-                                            name={row.name}
-                                            email={row.email}
-                                            phone={row.phone}
-                                            city={row.city}
-                                            rooms={row.rooms}
-                                            ratingAvg={row.ratingAvg}
+                                            key={hotel._id}
+                                            hotel={hotel}
                                         />
                                     ))}
 
