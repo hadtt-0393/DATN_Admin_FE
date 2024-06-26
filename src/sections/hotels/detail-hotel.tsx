@@ -116,19 +116,22 @@ export default function DetailHotel({ isOpen, onClose, hotel }: Prop) {
                                     </Typography>
                                     <Typography sx={{ flex: 1 }}>{hotel?.hotline}</Typography>
                                 </Stack>
-                                {/* <Stack direction="row" justifyContent="space-between" gap={3} alignItems="center">
+                                <Stack direction="row" justifyContent="space-between" gap={3} alignItems="start">
                                     <Typography variant="subtitle1" sx={{ color: 'text.disabled', flex: 0.6 }}>
                                         Dịch vụ khách sạn:
                                     </Typography>
-                                    {hotel.services.length > 0 && hotel.services.map(service => {
-                                        return (
-                                            <Box display="flex" flexDirection="row" lineHeight="1.1" alignItems="center" >
-                                                <CheckOutlinedIcon sx={{ color: "#3AACEE", fontSize: "16px" }} />
-                                                <Typography fontSize="14px" color="#8894B5" ml="10px">{service}</Typography>
-                                            </Box>
-                                        )
-                                    })}
-                                </Stack> */}
+                                    <Box flex={1}>
+                                        {hotel.services.length > 0 && hotel.services.map(service => {
+                                            return (
+                                                <Box display="flex" flexDirection="row" alignItems="center" >
+                                                    <CheckOutlinedIcon sx={{ color: "#3AACEE", fontSize: "20px" }} />
+                                                    <Typography lineHeight={2} ml="10px">{service}</Typography>
+                                                </Box>
+                                            )
+                                        })}
+                                    </Box>
+
+                                </Stack>
                                 <Stack direction="row" justifyContent="space-between" gap={3} alignItems="center">
                                     <Typography variant="subtitle1" sx={{ color: 'text.disabled', flex: 0.6 }}>
                                         Cách trung tâm thành phố:
@@ -183,8 +186,8 @@ export default function DetailHotel({ isOpen, onClose, hotel }: Prop) {
                                             <Box display="flex" flexDirection="column" justifyContent="space-between" alignItems="start" height="100%">
                                                 <Typography color="#334E6F" fontSize="19px" fontWeight="600" flex={1}>{room.roomType}</Typography>
                                                 <Box display="flex" flexDirection="row" justifyContent="start" alignItems="center" mt={1.5} flex={1}>
-                                                    <Typography color="#F9B90F" fontSize="13px" fontWeight="600" mr="5px">Số người tối đa:</Typography>
-                                                    <Typography color="#3AACED" fontSize="13px" fontWeight="600">{room.maxPeople} người</Typography>
+                                                    <Typography fontSize="14px" fontWeight="600" mr="5px">Số người tối đa:</Typography>
+                                                    <Typography fontSize="14px" fontWeight="600">{room.maxPeople} người</Typography>
                                                 </Box>
                                             </Box>
                                             <Box display="flex" flexDirection="column" justifyContent="space-between" alignItems="start" height="100%" >
@@ -194,8 +197,8 @@ export default function DetailHotel({ isOpen, onClose, hotel }: Prop) {
                                                 </Box>
                                                 <Box display="flex" flexDirection="row" justifyContent="end" alignItems="center" mt={1.5}>
                                                     <Typography color="#666" fontSize="14px" fontWeight="600" mr="10px">Số lượng phòng:</Typography>
-                                                    <Box bgcolor="orange" borderRadius="5px" padding="2px 8px">
-                                                        <Typography color="#FFF" fontSize="14px" fontWeight="600">{room.quantity}</Typography>
+                                                    <Box >
+                                                        <Typography color="#666" fontSize="14px" fontWeight="600">{room.quantity}</Typography>
                                                     </Box>
                                                 </Box>
                                             </Box>
