@@ -56,7 +56,7 @@ export default function SigninView() {
             !password ? setErrPassword(true) : setErrPassword(false)
             return;
         }
-        const login = async () => {
+        const signin= async () => {
             setLoading(true)
             try {
                 const res = await axiosInstance.post('/auth/admin/signin', {
@@ -71,7 +71,7 @@ export default function SigninView() {
                 setError(error)
             }
         }
-        await login()
+        signin()
     }
     const renderForm = (
         <Box component="form" noValidate onSubmit={handleSignin}>
