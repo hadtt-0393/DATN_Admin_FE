@@ -187,7 +187,7 @@ export default function DetailForm({ isOpen, onClose, userForm }: Prop) {
                                                 </Box>
                                                 <Box display="flex" flexDirection="row" justifyContent="start" m="20px" alignItems="center">
                                                     <PaidIcon sx={{ color: "#3AACED", fontSize: "30px" }} />
-                                                    <Box bgcolor="orange" borderRadius="5px" padding="4px 8px" ml="20px">
+                                                    <Box bgcolor={form?.paymentStatus === "Thanh toán khi trả phòng" ? "orange" : "#3AACED"} borderRadius="5px" padding="4px 8px" ml="20px">
                                                         <Typography color="#FFF" fontSize="16px" fontWeight="600" >{form.paymentStatus}</Typography>
                                                     </Box>
                                                 </Box>

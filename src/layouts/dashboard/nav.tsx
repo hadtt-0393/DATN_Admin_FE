@@ -47,7 +47,7 @@ export default function Nav({ openNav, onCloseNav }: any) {
       <Avatar src={account.photoURL} alt="photoURL" />
 
       <Box sx={{ ml: 2, gap: "10px", display: "flex", flexDirection: "column" }}>
-        <Typography variant="subtitle2">Quản trị viên</Typography>
+        <Typography fontWeight={700} fontSize="18px" color="#18458B">Quản trị viên</Typography>
       </Box>
     </Box>
   );
@@ -72,7 +72,7 @@ export default function Nav({ openNav, onCloseNav }: any) {
       }}
     >
       {/* <Logo sx={{ mt: 3, ml: 4 }} /> */}
-      <Box width="100%" bgcolor="#13366E" py="30px" borderRadius="5px">
+      <Box width="100%" bgcolor="#99CCFF" py="30px" borderRadius="5px">
         <img src="https://easybook.demotheme.matbao.support/wp-content/uploads/2018/08/logo.png" alt="logo"
           style={{
             height: "35px", width: "133px", cursor: "pointer",
@@ -86,6 +86,11 @@ export default function Nav({ openNav, onCloseNav }: any) {
       {renderMenu}
 
       <Box sx={{ flexGrow: 1 }} />
+      <Box>
+        <Button variant="outlined" sx={{ width: "100%", height: "60px", fontSize: "18px", textTransform: "uppercase", mb: "1px" }} onClick={() => { localStorage.removeItem('accessToken'); navigate('/signin') }}>
+          Đăng xuất
+        </Button>
+      </Box>
 
     </Scrollbar>
   );

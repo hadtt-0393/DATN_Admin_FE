@@ -77,17 +77,17 @@ export default function SigninView() {
         <Box component="form" noValidate onSubmit={handleSignin}>
             <Stack spacing={3} mb={5}>
                 <TextField
-                    name="account"
-                    label="Account"
+                    name="Tài khoản"
+                    label="Tài khoản"
                     value={account}
                     onChange={handleChangeEmail}
-                    autoComplete="email"
+                    // autoComplete="email"
                     autoFocus
                     error={errAccount}
                 />
                 <TextField
-                    name="password"
-                    label="Password"
+                    name="Mật khẩu"
+                    label="Mật khẩu"
                     type={showPassword ? 'text' : 'password'}
                     value={password}
                     onChange={handleChangePassword}
