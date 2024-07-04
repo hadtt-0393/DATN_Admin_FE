@@ -1,0 +1,113 @@
+Date : 2024-06-30 22:56:34
+Directory : c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src
+Total : 64 files,  3305 codes, 119 comments, 405 blanks, all 3829 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| TypeScript JSX |         44 |      2,529 |         97 |        316 |      2,942 |
+| TypeScript     |         18 |        730 |         22 |         81 |        833 |
+| CSS            |          2 |         46 |          0 |          8 |         54 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                      | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                         |         64 |      3,305 |        119 |        405 |      3,829 |
+| . (Files)                                                                                 |          8 |        106 |          9 |         22 |        137 |
+| api                                                                                       |          1 |         17 |          0 |          2 |         19 |
+| components                                                                                |          7 |        280 |         14 |         59 |        353 |
+| components\chart                                                                          |          1 |         58 |          3 |          7 |         68 |
+| components\label                                                                          |          2 |         95 |          8 |         17 |        120 |
+| components\logo                                                                           |          1 |         64 |          0 |         15 |         79 |
+| components\router-link                                                                    |          1 |          8 |          1 |          5 |         14 |
+| components\scrollbar                                                                      |          2 |         55 |          2 |         15 |         72 |
+| constant                                                                                  |          1 |          1 |          0 |          0 |          1 |
+| hooks                                                                                     |          4 |        203 |         24 |         45 |        272 |
+| layouts                                                                                   |          6 |        278 |          3 |         36 |        317 |
+| layouts\dashboard                                                                         |          6 |        278 |          3 |         36 |        317 |
+| mock                                                                                      |          3 |        168 |          1 |          2 |        171 |
+| models                                                                                    |          1 |         83 |          0 |          8 |         91 |
+| pages                                                                                     |          4 |         52 |          4 |         15 |         71 |
+| routes                                                                                    |          1 |         61 |         13 |          5 |         79 |
+| sections                                                                                  |         20 |      1,476 |         34 |        148 |      1,658 |
+| sections\home                                                                             |          3 |        164 |         23 |         15 |        202 |
+| sections\hotels                                                                           |          8 |        633 |          5 |         70 |        708 |
+| sections\signin                                                                           |          1 |        127 |          2 |         13 |        142 |
+| sections\users                                                                            |          8 |        552 |          4 |         50 |        606 |
+| theme                                                                                     |          7 |        563 |         17 |         58 |        638 |
+| utils                                                                                     |          1 |         17 |          0 |          5 |         22 |
++-------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                                  | language       | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\App.css                                 | CSS            |         33 |          0 |          6 |         39 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\App.test.tsx                            | TypeScript JSX |          8 |          0 |          2 |         10 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\App.tsx                                 | TypeScript JSX |         13 |          1 |          3 |         17 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\api\axios.ts                            | TypeScript     |         17 |          0 |          2 |         19 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\components\chart\index.tsx              | TypeScript JSX |         58 |          3 |          7 |         68 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\components\label\index.tsx              | TypeScript JSX |         33 |          1 |          8 |         42 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\components\label\styles.ts              | TypeScript     |         62 |          7 |          9 |         78 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\components\logo\index.tsx               | TypeScript JSX |         64 |          0 |         15 |         79 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\components\router-link\index.tsx        | TypeScript JSX |          8 |          1 |          5 |         14 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\components\scrollbar\index.tsx          | TypeScript JSX |         34 |          1 |         10 |         45 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\components\scrollbar\styles.tsx         | TypeScript JSX |         21 |          1 |          5 |         27 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\constant\index.ts                       | TypeScript     |          1 |          0 |          0 |          1 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\hooks\use-chart.tsx                     | TypeScript JSX |        169 |         22 |         26 |        217 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\hooks\use-pathname.tsx                  | TypeScript JSX |          6 |          1 |          4 |         11 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\hooks\use-reponsive.tsx                 | TypeScript JSX |         19 |          1 |         10 |         30 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\hooks\use-scroll-to-top.tsx             | TypeScript JSX |          9 |          0 |          5 |         14 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\index.css                               | CSS            |         13 |          0 |          2 |         15 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\index.tsx                               | TypeScript JSX |         25 |          3 |          4 |         32 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\layouts\dashboard\config-layout.ts      | TypeScript     |          8 |          0 |          2 |         10 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\layouts\dashboard\config-navigation.tsx | TypeScript JSX |         21 |          0 |          3 |         24 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\layouts\dashboard\header.tsx            | TypeScript JSX |         52 |          0 |          4 |         56 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\layouts\dashboard\index.tsx             | TypeScript JSX |         23 |          0 |          3 |         26 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\layouts\dashboard\main.tsx              | TypeScript JSX |         28 |          0 |          5 |         33 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\layouts\dashboard\nav.tsx               | TypeScript JSX |        146 |          3 |         19 |        168 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\mock\account.ts                         | TypeScript     |          5 |          1 |          2 |          8 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\mock\hotels.ts                          | TypeScript     |        137 |          0 |          0 |        137 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\mock\image.ts                           | TypeScript     |         26 |          0 |          0 |         26 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\models\index.ts                         | TypeScript     |         83 |          0 |          8 |         91 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\pages\app.tsx                           | TypeScript JSX |         13 |          2 |          4 |         19 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\pages\hotels.tsx                        | TypeScript JSX |         13 |          1 |          4 |         18 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\pages\signin.tsx                        | TypeScript JSX |         13 |          0 |          3 |         16 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\pages\users.tsx                         | TypeScript JSX |         13 |          1 |          4 |         18 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\react-app-env.d.ts                      | TypeScript     |          0 |          1 |          1 |          2 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\reportWebVitals.ts                      | TypeScript     |         13 |          0 |          3 |         16 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\routes\index.tsx                        | TypeScript JSX |         61 |         13 |          5 |         79 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\sections\home\app-revenue-month.tsx     | TypeScript JSX |         51 |          1 |          5 |         57 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\sections\home\app-widget-summary.tsx    | TypeScript JSX |         28 |          1 |          6 |         35 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\sections\home\homeview.tsx              | TypeScript JSX |         85 |         21 |          4 |        110 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\sections\hotels\detail-hotel.tsx        | TypeScript JSX |        237 |          0 |         15 |        252 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\sections\hotels\hotel-table-head.tsx    | TypeScript JSX |         45 |          1 |          5 |         51 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\sections\hotels\hotel-table-row.tsx     | TypeScript JSX |        106 |          0 |         11 |        117 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\sections\hotels\hotel-table-toolbar.tsx | TypeScript JSX |         30 |          1 |          3 |         34 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\sections\hotels\hotelsview.tsx          | TypeScript JSX |        122 |          1 |         21 |        144 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\sections\hotels\table-empty-rows.tsx    | TypeScript JSX |         18 |          1 |          4 |         23 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\sections\hotels\table-no-data.tsx       | TypeScript JSX |         26 |          1 |          3 |         30 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\sections\hotels\utils.ts                | TypeScript     |         49 |          0 |          8 |         57 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\sections\signin\signinview.tsx          | TypeScript JSX |        127 |          2 |         13 |        142 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\sections\users\detail-form.tsx          | TypeScript JSX |        220 |          0 |         11 |        231 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\sections\users\table-empty-rows.tsx     | TypeScript JSX |         18 |          1 |          4 |         23 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\sections\users\table-no-data.tsx        | TypeScript JSX |         26 |          1 |          3 |         30 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\sections\users\user-table-head.tsx      | TypeScript JSX |         45 |          1 |          5 |         51 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\sections\users\user-table-row.tsx       | TypeScript JSX |         47 |          0 |          5 |         52 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\sections\users\user-table-toolbar.tsx   | TypeScript JSX |         30 |          1 |          3 |         34 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\sections\users\usersview.tsx            | TypeScript JSX |        117 |          0 |         11 |        128 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\sections\users\utils.ts                 | TypeScript     |         49 |          0 |          8 |         57 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\setupTests.ts                           | TypeScript     |          1 |          4 |          1 |          6 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\theme\css.tsx                           | TypeScript JSX |        130 |          6 |         17 |        153 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\theme\custom-shadows.ts                 | TypeScript     |         23 |          3 |          5 |         31 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\theme\index.tsx                         | TypeScript JSX |         28 |          1 |          6 |         35 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\theme\overrides.tsx                     | TypeScript JSX |        143 |          1 |          3 |        147 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\theme\palette.ts                        | TypeScript     |        106 |          3 |         15 |        124 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\theme\shadows.ts                        | TypeScript     |         34 |          1 |          5 |         40 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\theme\typography.ts                     | TypeScript     |         99 |          2 |          7 |        108 |
+| c:\Users\ASUS\OneDrive\Máy tính\DATN_Admin_FE\src\utils\index.ts                          | TypeScript     |         17 |          0 |          5 |         22 |
+| Total                                                                                     |                |      3,305 |        119 |        405 |      3,829 |
++-------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+

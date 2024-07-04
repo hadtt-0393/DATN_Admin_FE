@@ -17,7 +17,8 @@ import VisibilityIcon from '@mui/icons-material/Visibility'
 import { useNavigate } from 'react-router-dom';
 import { bgGradient } from '../../theme/css';
 import axiosInstance from '../../api/axios';
-
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 // ----------------------------------------------------------------------
 
@@ -56,7 +57,7 @@ export default function SigninView() {
             !password ? setErrPassword(true) : setErrPassword(false)
             return;
         }
-        const signin= async () => {
+        const signin = async () => {
             setLoading(true)
             try {
                 const res = await axiosInstance.post('/auth/admin/signin', {
@@ -64,11 +65,14 @@ export default function SigninView() {
                     password
                 })
                 if (res.status === 200) {
+                    toast.success(`${res.data.message}`, { autoClose: 2000 })
                     localStorage.setItem("accessToken", JSON.stringify(res.data.accessToken))
                     navigate('/')
                 }
-            } catch (error) {
+
+            } catch (error: any) {
                 setError(error)
+                toast.error(`${error.response.data.message}`, { autoClose: 2000 })
             }
         }
         signin()
@@ -77,6 +81,7 @@ export default function SigninView() {
         <Box component="form" noValidate onSubmit={handleSignin}>
             <Stack spacing={3} mb={5}>
                 <TextField
+                    required
                     name="Tài khoản"
                     label="Tài khoản"
                     value={account}
@@ -86,6 +91,7 @@ export default function SigninView() {
                     error={errAccount}
                 />
                 <TextField
+                    required
                     name="Mật khẩu"
                     label="Mật khẩu"
                     type={showPassword ? 'text' : 'password'}
