@@ -32,6 +32,7 @@ export interface Form {
   createdAt: string
   updatedAt: string
   children: number
+  Rooms: any[]
 }
 
 export interface RoomChoose {
@@ -61,6 +62,7 @@ export interface Hotel {
   serviceIds: string[]
   services: string[]
   rooms: Room[]
+  status: string;
 }
 
 export interface Room {

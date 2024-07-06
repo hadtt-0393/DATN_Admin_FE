@@ -147,12 +147,13 @@ export default function DetailForm({ isOpen, onClose, userForm }: Prop) {
                                                 </Box>
                                                 <Box display="flex" flexDirection="row" justifyContent="start" m="20px" alignItems="center">
                                                     <DoorBackIcon sx={{ color: "#F9B90F", fontSize: "30px" }} />
-                                                    <Box bgcolor="#3AACED" borderRadius="5px" padding="2px 8px" ml="15px">
-                                                        <Typography color="#FFF" fontSize="16px" fontWeight="600" >301</Typography>
-                                                    </Box>
-                                                    <Box bgcolor="#3AACED" borderRadius="5px" padding="2px 8px" ml="15px">
-                                                        <Typography color="#FFF" fontSize="16px" fontWeight="600" >302</Typography>
-                                                    </Box>
+                                                    {form.Rooms.map((room:any) => {
+                                                        return (
+                                                            <Box bgcolor="#3AACED" borderRadius="5px" padding="2px 8px" ml="15px">
+                                                                 <Typography color="#FFF" fontSize="16px" fontWeight="600" >{room.roomType} x {room.quantity}</Typography>
+                                                            </Box>
+                                                        )
+                                                    })}
                                                 </Box>
                                                 <Box display="flex" flexDirection="row" justifyContent="start" m="20px" alignItems="center">
                                                     <PaidIcon sx={{ color: "#F9B90F", fontSize: "30px" }} />
