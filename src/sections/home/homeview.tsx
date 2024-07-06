@@ -50,7 +50,7 @@ export default function HomeView() {
                     />
                 </Grid> */}
 
-                <Grid xs={12} md={6} lg={8}>
+                <Grid xs={12} md={6} lg={6}>
                     <AppRevenueMonth
                         title="Website Visits"
                         subheader="(+43%) than last year"
@@ -96,7 +96,7 @@ export default function HomeView() {
                         <TableHead>
                             <TableRow>
                                 <TableCell sx={{ padding: "8px" }}>
-                                    <Typography>Trung tâm thú y</Typography>
+                                    <Typography>Tên khách sạn</Typography>
                                 </TableCell>
                                 <TableCell sx={{ padding: "8px" }} align="center">
                                     <Typography>Hotline</Typography>
@@ -112,14 +112,14 @@ export default function HomeView() {
                                 <TableCell sx={{ display: "flex", gap: 2, p: "10px" }}>
                                     <Avatar src="https://cdn-icons-png.freepik.com/512/147/147142.png"></Avatar>
                                     <Box>
-                                        <Typography fontWeight={550}>muong thanh</Typography>
+                                        <Typography fontWeight={550}>Khách sạn Mường Thanh</Typography>
                                         <Typography fontSize={14} color="#7E7988">
-                                            {/* {topShop.address.detail}, {topShop.address.district} */}
+                                            Số 20 Nguyễn Xiển
                                         </Typography>
                                     </Box>
                                 </TableCell>
                                 <TableCell sx={{ p: "10px" }} align="center">
-                                    <Typography>024</Typography>
+                                    <Typography>02435738964</Typography>
                                 </TableCell>
                                 <TableCell sx={{ p: "10px", width: "20%" }}>
                                     <Box
@@ -127,14 +127,14 @@ export default function HomeView() {
                                         borderRadius={10}
                                         bgcolor="#E4F6D6"
                                         alignItems="center"
-                                        justifyContent="end"
+                                        justifyContent="center"
                                         p="4px"
                                         width="70%"
                                         gap={0.5}
                                         m="auto"
                                     >
                                         <Typography>
-                                            {/* {Number(topShop.rating?.toFixed(2) || 0)} */}
+                                            5
                                         </Typography>
                                         <Star fontSize="small" sx={{ color: "#FFB400" }}></Star>
                                     </Box>
