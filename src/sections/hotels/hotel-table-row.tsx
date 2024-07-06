@@ -47,7 +47,7 @@ export default function HotelTableRow({
                         spacing={2}
                         sx={{ overflow: "hidden", width: "250px" }}
                     >
-                        <Avatar alt={hotel.hotelName} src={hotel.hotelName} />
+                        <Avatar alt={hotel.images[0]} src={hotel.images[0]} />
                         <Typography
                             variant="subtitle2"
                             noWrap

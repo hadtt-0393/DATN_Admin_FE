@@ -245,7 +245,7 @@ export default function DetailHotel({ isOpen, onClose, hotel }: Prop) {
                 <RoomList rooms={hotel.rooms} />
             </DialogContent>
             <DialogActions>
-                <Button onClick={handleClose} variant='outlined' size='large'>Đóng</Button>
+                <Button onClick={handleClose} variant='outlined' size='large' sx={{m:"10px"}}>Đóng</Button>
             </DialogActions>
         </Dialog>
     )
