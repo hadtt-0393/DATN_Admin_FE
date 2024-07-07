@@ -65,7 +65,7 @@ export default function HotelTableRow({ hotel, handleChangeStatus }: Prop) {
 					>
 						<Avatar
 							alt={hotel.hotelName}
-							src={hotel.hotelName}
+							src={hotel.images[0]}
 						/>
 						<Typography
 							variant="subtitle2"

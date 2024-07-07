@@ -12,13 +12,7 @@ export default function HomeView() {
                 Xin chào Quản trị viên
             </Typography>
             <Grid container spacing={5}>
-                {/* <Grid xs={12} sm={6} md={3}>
-                    <AppWidgetSummary
-                        title="Thành phố"
-                        total={60}
-                        icon={<img alt="icon" src="/assets/icons/city.png" />}
-                    />
-                </Grid> */}
+               
                 <Grid xs={12} sm={6} md={3}>
                     <AppWidgetSummary
                         title="Khách sạn"
@@ -51,6 +45,7 @@ export default function HomeView() {
                 </Grid>
 
                 <Grid xs={12} md={6} lg={5} bgcolor="#FFF">
+                    <Typography fontWeight="600" my="20px" fontSize="18px" color="#18458B">Top 10 khách sạn được đánh giá cao nhất</Typography>
                     <Table>
                         <TableHead>
                             <TableRow>
@@ -103,6 +98,7 @@ export default function HomeView() {
                 </Grid>
 
                 <Grid xs={12} md={6} lg={7} bgcolor="#FFF">
+                <Typography fontWeight="600" my="20px" fontSize="18px" color="#18458B">Top 10 khách sạn có doanh thu cao nhất</Typography>
                     <Table>
                         <TableHead>
                             <TableRow>
@@ -155,6 +151,143 @@ export default function HomeView() {
                                     </Box>
                                 </TableCell>
                             </TableRow>
+                            <TableRow >
+                                <TableCell sx={{ display: "flex", gap: 2, p: "10px", width: "350px", flexDirection: "row" }}>
+                                    <Avatar src="https://cdn-icons-png.freepik.com/512/147/147142.png"></Avatar>
+                                    <Box display="flex" flexDirection="column" overflow="hidden">
+                                        <Typography fontWeight={550} whiteSpace="nowrap" overflow="hidden" textOverflow="ellipsis" >Khách sạn Mường Thanh Khách Mường Thanh Khách </Typography>
+                                        <Typography fontSize={14} color="#7E7988" whiteSpace="nowrap" overflow="hidden" textOverflow="ellipsis" >
+                                            Số 20 Nguyễn Xiển Số 20 Nguyễn Xiển Số 20 Nguyễn Xiển Số 20 Nguyễn Xiển
+                                        </Typography>
+                                    </Box>
+                                </TableCell>
+                                <TableCell sx={{ p: "10px", width: "20%" }} align="center">
+                                    <Typography>02435738964</Typography>
+                                </TableCell>
+                                <TableCell sx={{ p: "10px", width: "20%" }} align="center">
+                                    <Typography>15</Typography>
+                                </TableCell>
+                                <TableCell sx={{ p: "10px", width: "20%" }}>
+                                    <Box
+                                        display="flex"
+                                        borderRadius={10}
+                                        bgcolor="orange"
+                                        alignItems="center"
+                                        justifyContent="center"
+                                        p="4px"
+
+                                        gap={0.5}
+                                        m="auto"
+                                    >
+                                        <Typography fontWeight="600">
+                                            20.000.000
+                                        </Typography>
+                                    </Box>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow >
+                                <TableCell sx={{ display: "flex", gap: 2, p: "10px", width: "350px", flexDirection: "row" }}>
+                                    <Avatar src="https://cdn-icons-png.freepik.com/512/147/147142.png"></Avatar>
+                                    <Box display="flex" flexDirection="column" overflow="hidden">
+                                        <Typography fontWeight={550} whiteSpace="nowrap" overflow="hidden" textOverflow="ellipsis" >Khách sạn Mường Thanh Khách Mường Thanh Khách </Typography>
+                                        <Typography fontSize={14} color="#7E7988" whiteSpace="nowrap" overflow="hidden" textOverflow="ellipsis" >
+                                            Số 20 Nguyễn Xiển Số 20 Nguyễn Xiển Số 20 Nguyễn Xiển Số 20 Nguyễn Xiển
+                                        </Typography>
+                                    </Box>
+                                </TableCell>
+                                <TableCell sx={{ p: "10px", width: "20%" }} align="center">
+                                    <Typography>02435738964</Typography>
+                                </TableCell>
+                                <TableCell sx={{ p: "10px", width: "20%" }} align="center">
+                                    <Typography>15</Typography>
+                                </TableCell>
+                                <TableCell sx={{ p: "10px", width: "20%" }}>
+                                    <Box
+                                        display="flex"
+                                        borderRadius={10}
+                                        bgcolor="orange"
+                                        alignItems="center"
+                                        justifyContent="center"
+                                        p="4px"
+
+                                        gap={0.5}
+                                        m="auto"
+                                    >
+                                        <Typography fontWeight="600">
+                                            20.000.000
+                                        </Typography>
+                                    </Box>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow >
+                                <TableCell sx={{ display: "flex", gap: 2, p: "10px", width: "350px", flexDirection: "row" }}>
+                                    <Avatar src="https://cdn-icons-png.freepik.com/512/147/147142.png"></Avatar>
+                                    <Box display="flex" flexDirection="column" overflow="hidden">
+                                        <Typography fontWeight={550} whiteSpace="nowrap" overflow="hidden" textOverflow="ellipsis" >Khách sạn Mường Thanh Khách Mường Thanh Khách </Typography>
+                                        <Typography fontSize={14} color="#7E7988" whiteSpace="nowrap" overflow="hidden" textOverflow="ellipsis" >
+                                            Số 20 Nguyễn Xiển Số 20 Nguyễn Xiển Số 20 Nguyễn Xiển Số 20 Nguyễn Xiển
+                                        </Typography>
+                                    </Box>
+                                </TableCell>
+                                <TableCell sx={{ p: "10px", width: "20%" }} align="center">
+                                    <Typography>02435738964</Typography>
+                                </TableCell>
+                                <TableCell sx={{ p: "10px", width: "20%" }} align="center">
+                                    <Typography>15</Typography>
+                                </TableCell>
+                                <TableCell sx={{ p: "10px", width: "20%" }}>
+                                    <Box
+                                        display="flex"
+                                        borderRadius={10}
+                                        bgcolor="orange"
+                                        alignItems="center"
+                                        justifyContent="center"
+                                        p="4px"
+
+                                        gap={0.5}
+                                        m="auto"
+                                    >
+                                        <Typography fontWeight="600">
+                                            20.000.000
+                                        </Typography>
+                                    </Box>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow >
+                                <TableCell sx={{ display: "flex", gap: 2, p: "10px", width: "350px", flexDirection: "row" }}>
+                                    <Avatar src="https://cdn-icons-png.freepik.com/512/147/147142.png"></Avatar>
+                                    <Box display="flex" flexDirection="column" overflow="hidden">
+                                        <Typography fontWeight={550} whiteSpace="nowrap" overflow="hidden" textOverflow="ellipsis" >Khách sạn Mường Thanh Khách Mường Thanh Khách </Typography>
+                                        <Typography fontSize={14} color="#7E7988" whiteSpace="nowrap" overflow="hidden" textOverflow="ellipsis" >
+                                            Số 20 Nguyễn Xiển Số 20 Nguyễn Xiển Số 20 Nguyễn Xiển Số 20 Nguyễn Xiển
+                                        </Typography>
+                                    </Box>
+                                </TableCell>
+                                <TableCell sx={{ p: "10px", width: "20%" }} align="center">
+                                    <Typography>02435738964</Typography>
+                                </TableCell>
+                                <TableCell sx={{ p: "10px", width: "20%" }} align="center">
+                                    <Typography>15</Typography>
+                                </TableCell>
+                                <TableCell sx={{ p: "10px", width: "20%" }}>
+                                    <Box
+                                        display="flex"
+                                        borderRadius={10}
+                                        bgcolor="orange"
+                                        alignItems="center"
+                                        justifyContent="center"
+                                        p="4px"
+
+                                        gap={0.5}
+                                        m="auto"
+                                    >
+                                        <Typography fontWeight="600">
+                                            20.000.000
+                                        </Typography>
+                                    </Box>
+                                </TableCell>
+                            </TableRow>
+                            
                         </TableBody>
                     </Table>
                 </Grid>
