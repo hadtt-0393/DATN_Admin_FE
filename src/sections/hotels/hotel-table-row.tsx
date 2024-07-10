@@ -29,7 +29,7 @@ export default function HotelTableRow({ hotel, handleChangeStatus }: Prop) {
 			case "Đang chờ duyệt":
 				return "orange";
 			case "Đang hoạt động":
-				return "#00Ab84";
+				return "#7CFC00";
 			case "Không duyệt":
 				return "#DDD";
 		}
