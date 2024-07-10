@@ -62,7 +62,8 @@ export interface Hotel {
   serviceIds: string[]
   services: string[]
   rooms: Room[]
-  status: string;
+  status: string
+  bookingCount: number
 }
 
 export interface Room {
@@ -78,7 +79,7 @@ export interface Room {
   maxPeople: number
   beds: Bed[]
   serviceIds: string[]
-  services: string[];
+  services: string[]
 }
 
 export interface Booking {

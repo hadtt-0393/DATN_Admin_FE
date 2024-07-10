@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Link, Outlet, useLocation, useNavigate, useRoutes } from 'react-router-dom';
 import DashboardLayout from "../layouts/dashboard";
 import axiosInstance from '../api/axios';
+import FormsPage from '../pages/forms';
 export const AppPage = lazy(() => import('../pages/app'));
 export const HotelsPage = lazy(() => import('../pages/hotels'));
 export const UsersPage = lazy(() => import('../pages/users'));
@@ -61,6 +62,7 @@ export default function Router() {
         { element: <AppPage />, index: true },
         { path: 'hotels', element: <HotelsPage /> },
         { path: 'users', element: <UsersPage /> },
+        { path: "forms", element: <FormsPage /> }
       ],
     }
     ,

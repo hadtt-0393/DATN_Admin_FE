@@ -17,7 +17,12 @@ const navConfig = [
     path: '/users',
     icon: <ContactEmergencyIcon />,
   },
-  
+  {
+    title: 'Quản lý đặt phòng',
+    path: '/forms',
+    icon: <ContactEmergencyIcon />,
+  },
+
 ];
 
 export default navConfig;
