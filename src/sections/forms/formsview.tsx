@@ -142,7 +142,7 @@ export default function UserPage() {
           dataFiltered.length === 0 &&
           <Box display="flex" justifyContent="center" alignItems="center" flexDirection="column" bgcolor={"white"} boxShadow="1px 1px 2px 2px #CCC" borderRadius="10px">
             <Typography variant="h4" color="green" mt="50px" mb="50px" >
-              Hiện bạn chưa có đơn đặt phòng nào!!!
+              Hiện hệ thống chưa có đơn đặt phòng nào!!!
             </Typography>
           </Box>
         }

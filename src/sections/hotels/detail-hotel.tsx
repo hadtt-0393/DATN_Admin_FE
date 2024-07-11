@@ -148,7 +148,7 @@ export default function DetailHotel({ isOpen, onClose, hotel }: Prop) {
                                     <Typography variant="subtitle1" sx={{ color: 'text.disabled', flex: 0.6 }}>
                                         Đánh giá trung bình:
                                     </Typography>
-                                    <Typography sx={{ flex: 1 }}>{hotel.ratingAvg === 0 ? "Chưa có đánh giá" : `${hotel.ratingAvg}`}</Typography>
+                                    <Typography sx={{ flex: 1 }}>{!hotel.ratingAvg ? "Chưa có đánh giá" : `${hotel.ratingAvg}`}</Typography>
                                 </Stack>
                                 <Stack direction="row" justifyContent="space-between" gap={3} alignItems="center">
                                     <Typography variant="subtitle1" sx={{ color: 'text.disabled', flex: 0.6 }}>
